@@ -23,17 +23,17 @@ pipeline {
     always {
       echo 'This is always run'
       deleteDir()
-      slackSend channel: '#general', 
+      slackSend channel: '#jenkins', 
                           message: "This is always run"
     }
     failure {
       echo 'This will run only if failed'
-      slackSend channel: '#general', 
+      slackSend channel: '#jenkins', 
                           message: "This will run only if failed"
       }
     unstable {
       echo 'This will run only if the run was marked as unstable'
-      slackSend channel: '#general', 
+      slackSend channel: '#jenkins', 
                           message: "This will run only if the run was marked as unstable"
     }
   }
