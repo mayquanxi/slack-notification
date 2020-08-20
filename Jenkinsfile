@@ -9,7 +9,7 @@ pipeline {
     stage('Test') {
       steps {
           sh 'echo "this is stage Test"'
-          sh 'whoami'
+          sh 'whoami2'
       }
     }
   }
